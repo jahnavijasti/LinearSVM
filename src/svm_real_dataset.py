@@ -5,7 +5,7 @@ import scipy.linalg
 import sklearn.preprocessing
 import sklearn.svm
 
-# Part 2: Load and standardize the Spam dataset
+# Standardize the Spam dataset
 data = pd.read_table('https://statweb.stanford.edu/~tibs/ElemStatLearn/datasets/spam.data', sep=' ', header=None)
 data_test = pd.read_table('https://statweb.stanford.edu/~tibs/ElemStatLearn/datasets/spam.traintest', sep=' ',
                                header=None)
@@ -15,7 +15,7 @@ x = np.asarray(data)[:, 0:-1]
 y = np.asarray(data)[:, -1]*2 - 1 
 data_test = np.array(data_test).T[0]
 
-# Divide the data into train, test sets
+# Divide data into train and test
 x_train = x[data_test == 0, :]
 x_test = x[data_test == 1, :]
 y_train = y[data_test == 0]
