@@ -1,5 +1,5 @@
 """
-This module is to compare between the LinearSVM algorithm with sklearn
+This module is an example on how to use the method on a real world dataset
 """
 import pandas as pd
 import numpy as np
