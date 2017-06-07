@@ -76,7 +76,7 @@ def backtrack(beta, lambduh, eta=1, alpha=0.5, betaparam=0.8,maxiter=100, x = x_
     return eta
 
 
-def fastgradient(beta_init, theta_init, lambduh, eta_init, maxiter, x= x_train, y= y_train):
+def mylinearsvm(beta_init, theta_init, lambduh, eta_init, maxiter, x= x_train, y= y_train):
     """
     This function implements fast gradient algorithm with backtracking rule
     to tune the step size.
@@ -131,7 +131,7 @@ beta_in = np.zeros(d)
 theta_in = np.zeros(d)
 eta_init = 1/(scipy.linalg.eigh(1/len(y_train)*x_train.T.dot(x_train), eigvals=(d-1, d-1), eigvals_only=True)[0]+lambduh_in)
 maxiter = 100
-betas_fastgrad, thetas_fastgrad = fastgradient(beta_in, theta_in, lambduh_in, eta_init, maxiter)
+betas_fastgrad, thetas_fastgrad = mylinearsvm(beta_in, theta_in, lambduh_in, eta_init, maxiter)
 print('Optimal betas:', betas_fastgrad[-1, :])
 objective_plot(betas_fastgrad, lambduh_in, save_file='')
 print('Misclassification error when lambda=1:', misclass_error(betas_fastgrad[-1, :]))
