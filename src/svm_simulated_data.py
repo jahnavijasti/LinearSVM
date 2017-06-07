@@ -4,7 +4,7 @@ import pandas as pd
 import scipy.linalg
 import sklearn.svm
 
-# Part 2: Create a random dataframe and standardize it.
+# Create a random dataframe and standardize it.
 np.random.seed(100)
 data = pd.DataFrame(np.random.randint(0,100,size=(8000, 1000)))
 data_test = pd.DataFrame(np.random.randint(0,2,size=(8000, 1)))
@@ -30,7 +30,7 @@ n_test = len(y_test)
 d = np.size(x, 1)
 
 
-# Part 3: Implementation of fast gradient to train linear SVM
+#  Implement fast gradient to train linear SVM
 def grad_obj(beta, lambduh, x , y ):
     """
     This function calculated the gradient of the Linear Support
