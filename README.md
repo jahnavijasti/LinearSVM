@@ -15,7 +15,7 @@ Users need to install the following packages, if not already done:
 *sklearn*
 *matplotlib*`
 
-# Data used
+## Data used
 There are two datasets used. 
 One of them is the Spam dataset, that has been downloaded directly from https://statweb.stanford.edu/~tibs/ElemStatLearn/datasets/spam.data
 It gives information whether an email is spam or not. 
