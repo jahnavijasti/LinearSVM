@@ -5,11 +5,10 @@ import scipy.linalg
 import sklearn.preprocessing
 import sklearn.svm
 
-# Standardize the Spam dataset
-data = pd.read_table('https://statweb.stanford.edu/~tibs/ElemStatLearn/datasets/spam.data', sep=' ', header=None)
-data_test = pd.read_table('https://statweb.stanford.edu/~tibs/ElemStatLearn/datasets/spam.traintest', sep=' ',
-                               header=None)
-
+# Create a random dataframe and standardize it.
+np.random.seed(100)
+data = pd.DataFrame(np.random.randint(0,100,size=(8000, 1000)))
+data_test = pd.DataFrame(np.random.randint(0,2,size=(8000, 1)))
 
 x = np.asarray(data)[:, 0:-1]
 y = np.asarray(data)[:, -1]*2 - 1 
