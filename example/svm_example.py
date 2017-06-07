@@ -4,7 +4,7 @@ This module is to compare between the LinearSVM algorithm with sklearn
 import sklearn.preprocessing
 import sklearn.svm
 
-from demo_svm_real_dataset import *
+import src.svm_real_dataset
 
 
 ## From algorithm
