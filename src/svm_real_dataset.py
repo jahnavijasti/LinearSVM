@@ -12,7 +12,7 @@ data_test = pd.read_table('https://statweb.stanford.edu/~tibs/ElemStatLearn/data
 
 
 x = np.asarray(data)[:, 0:-1]
-y = np.asarray(data)[:, -1]*2 - 1  # Convert to +/- 1
+y = np.asarray(data)[:, -1]*2 - 1 
 data_test = np.array(data_test).T[0]
 
 # Divide the data into train, test sets
@@ -26,14 +26,12 @@ scaler = sklearn.preprocessing.StandardScaler()
 scaler.fit(x_train)
 x_train = scaler.transform(x_train)
 x_test = scaler.transform(x_test)
-
-# Keep track of the number of samples and dimension of each sample
 n_train = len(y_train)
 n_test = len(y_test)
 d = np.size(x, 1)
 
 
-# Part 3: Implementation of fast gradient to train linear SVM
+#Implement of fast gradient to train linear SVM
 def grad_obj(beta, lambduh, x , y ):
     """
     This function calculated the gradient of the Linear Support
