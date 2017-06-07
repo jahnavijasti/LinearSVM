@@ -21,8 +21,8 @@ print('Misclassification error when lambda=1:', misclass_error(betas_fastgrad[-1
 ## compare with sklearn
 linear_svc = sklearn.svm.LinearSVC(penalty='l2', C=1/(2*lambduh_in*n_train), fit_intercept=False, tol=10e-8, max_iter=1000)
 linear_svc.fit(x_train, y_train)
-print('Estimated beta from sklearn:', linear_svc.coef_)
-print('Estimated beta from code:', betas_fastgrad[-1, :])
+print('Betas from sklearn:', linear_svc.coef_)
+print('Betas from code:', betas_fastgrad[-1, :])
 
-print('Objective value at optimum beta from sklearn:', objective(betas_fastgrad[-1, :], lambduh_in, x = x_train, y = y_train))
-print('Objective value at optimum beta from code:', objective(linear_svc.coef_.flatten(), lambduh_in, x=x_train, y=y_train))
+print('Objective value from sklearn:', objective(betas_fastgrad[-1, :], lambduh_in, x = x_train, y = y_train))
+print('Objective value from code:', objective(linear_svc.coef_.flatten(), lambduh_in, x=x_train, y=y_train))
