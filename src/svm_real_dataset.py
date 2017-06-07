@@ -98,7 +98,7 @@ def fastgradient(beta_init, theta_init, lambduh, eta_init, maxiter, x= x_train, 
     return beta_vals, theta_vals
 
 
-def misclass_error(beta, x = x_train, y= y_train):
+def misclass_error(beta, x = x_test, y= y_test):
     """
     This function calculates the mis-classification error between
     the testing y and predicted y.
