@@ -8,7 +8,8 @@ There are two datasets used.
 One of them is the Spam dataset, that has been downloaded directly from https://statweb.stanford.edu/~tibs/ElemStatLearn/datasets/spam.data
 It gives information whether an email is spam or not. 
 Other is a simulated dataset using `np.random.randint`
-The data_test should contain either +1 or -1
+
+Users can use their own dataset. But the data_test should contain either +1 or -1
 
 ## Functions
 The `objective` function calculates the objective of the SVM with squared hinge loss, while *grad_obj* calculated the gradient.
