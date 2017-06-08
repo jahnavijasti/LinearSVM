@@ -24,9 +24,7 @@ scaler = sklearn.preprocessing.StandardScaler()
 scaler.fit(x_train)
 x_train = scaler.transform(x_train)
 x_test = scaler.transform(x_test)
-
 n_train = len(y_train)
-n_test = len(y_test)
 d = np.size(x, 1)
 
 
