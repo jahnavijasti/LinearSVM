@@ -29,7 +29,7 @@ n_train = len(y_train)
 d = np.size(x, 1)
 
 
-#Implement of fast gradient to train linear SVM
+#Implement fast gradient to train linear SVM
 def grad_obj(beta, lambduh, x , y ):
     """
     This function calculated the gradient of the Linear Support
