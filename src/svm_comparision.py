@@ -13,8 +13,6 @@ import sklearn.svm
 data = pd.read_table('https://statweb.stanford.edu/~tibs/ElemStatLearn/datasets/spam.data', sep=' ', header=None)
 data_test = pd.read_table('https://statweb.stanford.edu/~tibs/ElemStatLearn/datasets/spam.traintest', sep=' ',
                                header=None)
-
-
 x = np.asarray(data)[:, 0:-1]
 y = np.asarray(data)[:, -1]*2 - 1
 data_test = np.array(data_test).T[0]
@@ -31,7 +29,6 @@ scaler.fit(x_train)
 x_train = scaler.transform(x_train)
 x_test = scaler.transform(x_test)
 n_train = len(y_train)
-n_test = len(y_test)
 d = np.size(x, 1)
 
 
